@@ -10,8 +10,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     // Variables to keep track of count
-    int CountA = 0;
-    int CountB = 0;
+    int countA = 0;
+    int countB = 0;
     int gamePointA = 0;
     int gamePointB = 0;
     int setPointA = 0;
@@ -38,36 +38,36 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Used Count here because the score in tennis is not incremental
-                CountA++;
-                if (CountA == 1) {
+                countA++;
+                if (countA == 1) {
                     countAGameScore.setText("15");
-                } else if (CountA == 2) {
+                } else if (countA == 2) {
                     countAGameScore.setText("30");
-                } else if (CountA == 3) {
+                } else if (countA == 3) {
                     countAGameScore.setText("40");
-                } else if (CountA == 4) {
+                } else if (countA == 4) {
                     //Different conditionals to define if the score should be "Ad" or "40"
-                    if (CountB == 3 && countAGameScore.getText() == "40" && countBGameScore.getText() == "40") {
+                    if (countB == 3 && countAGameScore.getText() == "40" && countBGameScore.getText() == "40") {
                         countAGameScore.setText("Ad");
-                        CountA--;
-                    } else if (CountB == 3 && countAGameScore.getText() == "Ad" && countBGameScore.getText() == "40") {
+                        countA--;
+                    } else if (countB == 3 && countAGameScore.getText() == "Ad" && countBGameScore.getText() == "40") {
                         countAGameScore.setText("0");
                         countBGameScore.setText("0");
-                        CountA = 0;
-                        CountB = 0;
+                        countA = 0;
+                        countB = 0;
                         gamePointA++;
                         countAGamePoint.setText(String.valueOf(gamePointA));
-                    } else if (CountB == 3 && countBGameScore.getText() == "Ad" && countAGameScore.getText() == "40") {
+                    } else if (countB == 3 && countBGameScore.getText() == "Ad" && countAGameScore.getText() == "40") {
                         countAGameScore.setText("40");
                         countBGameScore.setText("40");
-                        CountA--;
+                        countA--;
                     }
                     //Otherwise just reset score
                     else {
                         countAGameScore.setText("0");
                         countBGameScore.setText("0");
-                        CountA = 0;
-                        CountB = 0;
+                        countA = 0;
+                        countB = 0;
                         gamePointA++;
                         countAGamePoint.setText(String.valueOf(gamePointA));
                     }
@@ -94,36 +94,36 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Used Count here because the score in tennis is not incremental
-                CountB++;
-                if (CountB == 1) {
+                countB++;
+                if (countB == 1) {
                     countBGameScore.setText("15");
-                } else if (CountB == 2) {
+                } else if (countB == 2) {
                     countBGameScore.setText("30");
-                } else if (CountB == 3) {
+                } else if (countB == 3) {
                     countBGameScore.setText("40");
-                } else if (CountB == 4) {
+                } else if (countB == 4) {
                     //Different conditionals to define if the score should be "Ad" or "40"
-                    if (CountA == 3 && countBGameScore.getText() == "40" && countAGameScore.getText() == "40") {
+                    if (countA == 3 && countBGameScore.getText() == "40" && countAGameScore.getText() == "40") {
                         countBGameScore.setText("Ad");
-                        CountB--;
-                    } else if (CountA == 3 && countBGameScore.getText() == "Ad" && countAGameScore.getText() == "40") {
+                        countB--;
+                    } else if (countA == 3 && countBGameScore.getText() == "Ad" && countAGameScore.getText() == "40") {
                         countAGameScore.setText("0");
                         countBGameScore.setText("0");
-                        CountA = 0;
-                        CountB = 0;
+                        countA = 0;
+                        countB = 0;
                         gamePointB++;
                         countBGamePoint.setText(String.valueOf(gamePointB));
-                    } else if (CountA == 3 && countAGameScore.getText() == "Ad" && countBGameScore.getText() == "40") {
+                    } else if (countA == 3 && countAGameScore.getText() == "Ad" && countBGameScore.getText() == "40") {
                         countAGameScore.setText("40");
                         countBGameScore.setText("40");
-                        CountB--;
+                        countB--;
                     }
                     //Otherwise just reset score
                     else {
                         countAGameScore.setText("0");
                         countBGameScore.setText("0");
-                        CountA = 0;
-                        CountB = 0;
+                        countA = 0;
+                        countB = 0;
                         gamePointB++;
                         countBGamePoint.setText(String.valueOf(gamePointB));
                     }
@@ -155,8 +155,8 @@ public class MainActivity extends AppCompatActivity {
                 countBGamePoint.setText("0");
                 countASetPoint.setText("0");
                 countBSetPoint.setText("0");
-                CountA = 0;
-                CountB = 0;
+                countA = 0;
+                countB = 0;
                 gamePointA = 0;
                 gamePointB = 0;
                 setPointA = 0;
